@@ -1,22 +1,16 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({
-    jshint: {
-      all: ['Gruntfile.js', 'src/**/*.js', 'spec/**/*.js']
-    },
-
+ grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     mocha_casperjs: {
-      options: {},
+      options: {
+      },
       files: {
         src: ['test/**/*']
       }
-    },
-
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+    }
+  })
   grunt.loadNpmTasks('grunt-mocha-casperjs');
 
-  grunt.registerTask('default', ['jshint', 'mocha-casperjs']);
-
+  grunt.registerTask('default', ['mocha_casperjs']);
 };
