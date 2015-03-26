@@ -13,13 +13,3 @@ describe("homepage", function() {
   });
 
 });
-
-describe("greeting page", function() {
-
-  it("greets the user", function() {
-    casper.thenOpen(host + '/greeting', function() {
-      expect('body').to.contain.text("hi gus");
-    });
-  });
-
-});

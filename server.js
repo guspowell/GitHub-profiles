@@ -10,11 +10,11 @@ server.listen(3000, function() {
 });
 
 app.get('/', function(request, response) {
-  response.render('index');
+  response.render('index')
 });
 
-app.get('/greeting', function(request, response) {
-   response.render('greeting', {name: 'gus'});
+app.get('/datejson', function(request, response) {
+  response.json(new Date);
 });
 
 module.exports = server;
