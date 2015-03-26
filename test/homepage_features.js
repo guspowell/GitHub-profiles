@@ -1,12 +1,12 @@
-describe('homepage', function() {
+describe("homepage", function() {
 
   before(function() {
     casper.start('http://localhost:3000/');
   });
 
-  it('says hello world', function() {
+  it('hello worlds', function() {
     casper.then(function() {
-      expect(body).to.have.text('hello world');
+      expect('body').to.have.text('hello world');
     });
   });
 
