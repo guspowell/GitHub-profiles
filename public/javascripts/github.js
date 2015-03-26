@@ -1,7 +1,7 @@
 function addProfileFromUsername(username){
   $.get('https://api.github.com/users/'+ username, function(user) {
     var newProfile = Mustache.render($('#profile-template').html(), user);
-    $('.profile-container').append(newProfile);
+    $(newProfile).appendTo('.profile-container').fadeIn();
   })
 };
 
