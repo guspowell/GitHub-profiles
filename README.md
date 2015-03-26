@@ -18,6 +18,21 @@ An introduction to Node. We were required to setup a Node server and create a si
 - Mustache
 - CSS
 
+## Instructions
+Clone the repository:
+```
+$ git clone git@github.com:guspowell/GitHub-profiles.git
+```
+Change into the repository:
+```
+$ cd GitHub-profiles
+```
+Start the server:
+```
+$ npm start
+```
+Open: [http://localhost:3000/](http://localhost:3000/)
+
 ## Favourite Code Snippet
 
 ```javascript
@@ -27,6 +42,7 @@ $.get('https://api.github.com/users/'+ username, function(user){
   $('.profile-container').slideDown();
 })
 ```
+
 
 ## Still to complete/refactor
 
