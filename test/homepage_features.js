@@ -1,14 +1,14 @@
-var host = "http://localhost:3000";
+describe("Main page", function() {
 
-before(function() {
-  casper.start(host);
-});
+  var host = "http://localhost:3000";
 
-describe("homepage", function() {
+  before(function() {
+    casper.start(host);
+  });
 
-  it('hello worlds', function() {
-    casper.then(function() {
-      expect('body').to.contain.text("hello world");
+  it('displays my id', function() {
+    casper.thenOpen(host, function() {
+      expect('.profile-container').to.include.text("guspowell");
     });
   });
 

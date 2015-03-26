@@ -13,8 +13,4 @@ app.get('/', function(request, response) {
   response.render('index')
 });
 
-app.get('/datejson', function(request, response) {
-  response.json(new Date);
-});
-
 module.exports = server;
