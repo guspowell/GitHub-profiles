@@ -1,7 +1,8 @@
 function addProfileFromUsername(username){
   $.get('https://api.github.com/users/'+ username, function(user){
     var newProfile = Mustache.render($('#profile-template').html(), user);
-    $(newProfile).appendTo('.profile-container').slideDown();
+    $(newProfile).appendTo('.profile-container');
+    $('.profile-container').slideDown();
   }).error(function(){
     alert('No such user with the username: ' + username);
   }).always(function() {
@@ -11,6 +12,8 @@ function addProfileFromUsername(username){
 
 
 $(document).ready(function() {
+
+  $('.test').fadeIn();
 
   $('#add_profile').on('submit', function(event) {
     event.preventDefault();

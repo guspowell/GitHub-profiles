@@ -7,6 +7,10 @@ input {
   width: 510px;
 }
 
+.profile-container {
+  display: none;
+}
+
 .profile {
   background: #606c88;
   background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%);
