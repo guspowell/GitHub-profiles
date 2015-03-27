@@ -13,8 +13,6 @@ function addProfileFromUsername(username){
 
 $(document).ready(function() {
 
-  $('.test').fadeIn();
-
   $('#add_profile').on('submit', function(event) {
     event.preventDefault();
     addProfileFromUsername($('#username').val());
@@ -23,4 +21,5 @@ $(document).ready(function() {
   $('.profile-container').on('click', '.close', function(){
     $(this).closest('.profile').remove();
   });
+
 });
